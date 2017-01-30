@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.9.2
+  IMPORTANT: This includes a kernel bump to 4.4.43 and bumps for rpi-userland and
+  rpi-firmware. Most importantly, kernels no longer need to be marked that
+  use device tree, so the kernel marking logic has been removed. This will
+  break systems, but those systems should upgrade their kernels to avoid
+  any mismatches between kernel patches and rpi-firmware.
+
+## v0.9.1
+  * Bug Fixes
+    * Include `external.desc` in hex package
+
+## v0.9.0
+
+IMPORTANT: All Nerves Systems will need all references to the `BR2_EXTERNAL`
+environment variable updated to `BR2_EXTERNAL_NERVES_PATH`.
+
+  * New features
+    * Bump Buildroot version to 2016.11.1
+    * Update Erlang/OTP to 19.2
+    * Update erlinit v0.8.0 (multi-boot script support)
+    * Update fwup to v0.12.1
+
 ## v0.8.2
   * Bug Fixes
     * raise exceptions in nerves-env with Mix.raise instead of Nerves.Env.Exception
